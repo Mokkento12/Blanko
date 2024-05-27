@@ -287,8 +287,6 @@ body {
   height: auto;
 }
 
-.swiper-slide {}
-
 .slide__container {
   width: 100%;
   height: auto;
@@ -335,4 +333,67 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 0;
+}
+
+/* Landings */
+
+.landing__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing__container {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 100px 0;
+}
+
+.landing__title {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  margin-bottom: 26px;
+}
+
+.landing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 414px);
+  gap: 16px;
+}
+
+.landing__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing__image--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px 0;
+  background-color: #000;
+}
+
+.landing__descr {
+  width: 416px;
+  display: flex;
+  align-items: start;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  padding: 25px;
+
+}
+
+.landing__text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
 }
