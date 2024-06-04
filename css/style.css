@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -25,7 +25,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 22px 0;
-  /* margin: 0 auto; */
 }
 
 .header__contact {
@@ -87,6 +86,12 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+
+/* Скрыть бургер кнопку изначально */
+.hamburger {
+  display: none;
+}
+
 
 /* Hero */
 
@@ -557,11 +562,35 @@ body {
     margin-bottom: 33px;
   }
 
-  /* .header__input,
+  /* Стили для бургер кнопки */
+  .hamburger {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: auto;
+    right: 16px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger__line {
+    width: 20px;
+    height: 1px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 4px;
+  }
+
+  .header__input,
   .nav__links,
   .header__button {
     display: none;
-  } */
+  }
+
+  .open {
+    display: block !important;
+  }
 
   .hero {
     width: 100%;
