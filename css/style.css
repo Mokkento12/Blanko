@@ -684,12 +684,13 @@ body {
   }
 
   .swiper {
-    padding: 32px 16px;
+    width: 100%;
+    padding: 32px 0;
   }
 
-  /* .swiper-wrapper {
+  .swiper-wrapper {
     width: 100%;
-  } */
+  }
 
   .slider__title {
     width: 50px;
