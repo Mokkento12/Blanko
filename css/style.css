@@ -573,6 +573,7 @@ body {
     right: 16px;
     top: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
 
   .hamburger__line {
@@ -580,6 +581,7 @@ body {
     height: 1px;
     background: rgb(255, 255, 255);
     margin-bottom: 4px;
+    transition: all 0.3s ease;
   }
 
   .header__input,
@@ -590,6 +592,69 @@ body {
 
   .open {
     display: block !important;
+  }
+
+  /* Стили для крестика */
+  .close {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 13px;
+    left: 284px;
+    right: 16px;
+    top: 19px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .close__line {
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+
+  .close__line:first-child {
+    transform: rotate(30.00deg);
+  }
+
+  .close__line:last-child {
+    transform: rotate(-30.00deg);
+  }
+
+
+  /* Показать крестик вместо бургер-меню, когда меню открыто */
+  .menu-open .hamburger {
+    transform: rotate(45deg);
+    /* Добавлен поворот бургер-меню */
+  }
+
+  .menu-open .hamburger__line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    /* Поворот и сдвиг первой линии */
+    background: transparent;
+    /* Скрытие линии */
+  }
+
+  .menu-open .hamburger__line:nth-child(2) {
+    opacity: 0;
+    /* Скрытие второй линии */
+  }
+
+  .menu-open .hamburger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    /* Поворот и сдвиг третьей линии */
+    background: transparent;
+    /* Скрытие линии */
+  }
+
+  .menu-open .close {
+    display: block;
+    transform: rotate(0);
+    /* Сброс поворота крестика */
   }
 
   .hero {
